@@ -1,0 +1,495 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACTIVE	.\src\Constants.py	/^ACTIVE = 1$/;"	v
+AIPlayer	.\src\AI\Booger.py	/^class AIPlayer(Player):$/;"	c
+AIPlayer	.\src\AI\FoodGatherer.py	/^class AIPlayer(Player):$/;"	c
+AIPlayer	.\src\AI\Random.py	/^class AIPlayer(Player):$/;"	c
+AIPlayer	.\src\AI\degrood21_schendel21.py	/^class AIPlayer(Player):$/;"	c
+AI_MODE	.\src\Constants.py	/^AI_MODE = 2$/;"	v
+AI_MOVE_TIMEOUT	.\src\Constants.py	/^AI_MOVE_TIMEOUT = 30$/;"	v
+ANTHILL	.\src\Constants.py	/^ANTHILL = -4$/;"	v
+ANT_NAMES	.\src\SettingsPane.py	/^ANT_NAMES = [ "Workers", "Drones", "Soldiers", "Ranged Soldiers" ]$/;"	v
+ATTACK	.\src\Constants.py	/^ATTACK = 2$/;"	v
+AddPauseOptionsFrame	.\src\SettingsPane.py	/^class AddPauseOptionsFrame ( wgt.ScrollableFrame ) :$/;"	c
+AdditionalSettingsOptionsFrame	.\src\SettingsPane.py	/^class AdditionalSettingsOptionsFrame ( wgt.ScrollableFrame ) :$/;"	c
+Ant	.\src\Ant.py	/^class Ant(object):$/;"	c
+Ant	.\src\GameState.py	/^from Ant import Ant$/;"	i
+AntMod	.\src\SettingsPane.py	/^import Ant as AntMod$/;"	i
+BOARD_LENGTH	.\src\Constants.py	/^BOARD_LENGTH = 10$/;"	v
+BUILD	.\src\Constants.py	/^BUILD = 1$/;"	v
+BUILD_COST	.\src\Constants.py	/^BUILD_COST = 2$/;"	v
+BUTTON1_FONT	.\src\SettingsPane.py	/^BUTTON1_FONT = ( "Copperplate", 20, "bold")$/;"	v
+BUTTON2_FONT	.\src\SettingsPane.py	/^BUTTON2_FONT = ( "Copperplate", 15, "bold")$/;"	v
+BlueBox	.\src\SettingsPane.py	/^class BlueBox ( tk.Frame ) :$/;"	c
+BoardButton	.\src\GamePane.py	/^class BoardButton:$/;"	c
+Building	.\src\Building.py	/^class Building(Construction):$/;"	c
+Building	.\src\GameState.py	/^from Building import Building$/;"	i
+CAP_HEALTH	.\src\Constants.py	/^CAP_HEALTH = 1$/;"	v
+CONSTR_STATS	.\src\AI\Booger.py	/^from Construction import CONSTR_STATS$/;"	i
+CONSTR_STATS	.\src\AI\FoodGatherer.py	/^from Construction import CONSTR_STATS$/;"	i
+CONSTR_STATS	.\src\AI\Random.py	/^from Construction import CONSTR_STATS$/;"	i
+CONSTR_STATS	.\src\AI\degrood21_schendel21.py	/^from Construction import CONSTR_STATS$/;"	i
+CONSTR_STATS	.\src\Construction.py	/^CONSTR_STATS = []$/;"	v
+COPY	.\src\Constants.py	/^COPY = -2$/;"	v
+COST	.\src\Constants.py	/^COST = 4$/;"	v
+ColoredButton	.\src\RedoneWidgets.py	/^class ColoredButton(tk.Label):$/;"	c
+ConstrMod	.\src\SettingsPane.py	/^import Construction as ConstrMod$/;"	i
+Construction	.\src\Construction.py	/^class Construction(object):$/;"	c
+DRONE	.\src\Constants.py	/^DRONE = 2$/;"	v
+END	.\src\Constants.py	/^END = 2$/;"	v
+ERROR_CODE	.\src\SettingsPane.py	/^ERROR_CODE = -1$/;"	v
+FLASH_COLOR	.\src\RedoneWidgets.py	/^FLASH_COLOR = "#425261"$/;"	v
+FLASH_TIME	.\src\RedoneWidgets.py	/^FLASH_TIME = 0.05$/;"	v
+FL_BD	.\src\SettingsPane.py	/^FL_BD = 5$/;"	v
+FL_BD	.\src\StatsPane.py	/^FL_BD = 5$/;"	v
+FL_COLOR	.\src\SettingsPane.py	/^FL_COLOR = "black"$/;"	v
+FL_COLOR	.\src\StatsPane.py	/^FL_COLOR = "black"$/;"	v
+FL_FONT	.\src\SettingsPane.py	/^FL_FONT = ( "Harrington", 18, "bold")$/;"	v
+FL_FONT	.\src\StatsPane.py	/^FL_FONT = ( "Harrington", 16, "bold")$/;"	v
+FL_STYLE	.\src\SettingsPane.py	/^FL_STYLE = "ridge"$/;"	v
+FL_STYLE	.\src\StatsPane.py	/^FL_STYLE = "ridge"$/;"	v
+FL_TEXT_COLOR	.\src\SettingsPane.py	/^FL_TEXT_COLOR = "white"$/;"	v
+FL_TEXT_COLOR	.\src\StatsPane.py	/^FL_TEXT_COLOR = "white"$/;"	v
+FOOD	.\src\Constants.py	/^FOOD = -1$/;"	v
+FOOD_GOAL	.\src\Constants.py	/^FOOD_GOAL = 11$/;"	v
+FRAME_BDR	.\src\SettingsPane.py	/^FRAME_BDR = 5$/;"	v
+F_BORDER	.\src\StatsPane.py	/^F_BORDER = 5$/;"	v
+Font	.\src\RedoneWidgets.py	/^from tkinter.font import Font$/;"	i
+Font	.\src\SettingsPane.py	/^from tkinter.font import Font$/;"	i
+GAME_TYPES	.\src\SettingsPane.py	/^GAME_TYPES = [ "QuickStart", "Two Player", "Play Self", "Round Robin", "Play All" ]$/;"	v
+GRASS	.\src\Constants.py	/^GRASS = -2$/;"	v
+GREEN	.\src\RedoneWidgets.py	/^GREEN = "#398e2e"$/;"	v
+GUIHandler	.\src\GUIHandler.py	/^class GUIHandler:$/;"	c
+Game	.\src\Game.py	/^class Game(object):$/;"	c
+GameData	.\src\Game.py	/^class GameData:$/;"	c
+GameGUIData	.\src\SettingsPane.py	/^class GameGUIData () :$/;"	c
+GamePane	.\src\GamePane.py	/^class GamePane:$/;"	c
+GameSettingsFrame	.\src\SettingsPane.py	/^class GameSettingsFrame ( ) :$/;"	c
+GameState	.\src\GameState.py	/^class GameState(object):$/;"	c
+GraphNode	.\src\AIPlayerUtils.py	/^class GraphNode:$/;"	c
+HEALTH	.\src\Constants.py	/^HEALTH = 1$/;"	v
+HEIGHT	.\src\StatsPane.py	/^HEIGHT = 27#20$/;"	v
+HUMAN	.\src\Constants.py	/^HUMAN = -1$/;"	v
+HUMAN_MODE	.\src\Constants.py	/^HUMAN_MODE = 1$/;"	v
+HelloUI	.\Hello World.py	/^class HelloUI(tk.Frame):$/;"	c
+HumanPlayer	.\src\Game.py	/^import HumanPlayer$/;"	i
+HumanPlayer	.\src\HumanPlayer.py	/^class HumanPlayer(Player):$/;"	c
+IGNORES_GRASS	.\src\Constants.py	/^IGNORES_GRASS = 5$/;"	v
+INACTIVE	.\src\Constants.py	/^INACTIVE = 0$/;"	v
+INVALID_ATTACK	.\src\Constants.py	/^INVALID_ATTACK = 2$/;"	v
+INVALID_MOVE	.\src\Constants.py	/^INVALID_MOVE = 1$/;"	v
+INVALID_PLACEMENT	.\src\Constants.py	/^INVALID_PLACEMENT = 0$/;"	v
+Inventory	.\src\GameState.py	/^from Inventory import Inventory$/;"	i
+Inventory	.\src\Inventory.py	/^class Inventory(object):$/;"	c
+Is	.\src\Game.py	/^import InfoScraper as Is$/;"	i
+LAYOUT_OPTIONS	.\src\SettingsPane.py	/^LAYOUT_OPTIONS = [ "Player Invoked", "Random Override" ]$/;"	v
+LIGHT_BLUE	.\src\RedoneWidgets.py	/^LIGHT_BLUE = "#a8d5ff"$/;"	v
+LIGHT_GREEN	.\src\RedoneWidgets.py	/^LIGHT_GREEN = "#80c577"$/;"	v
+LIGHT_PURPLE	.\src\RedoneWidgets.py	/^LIGHT_PURPLE = "#c9b6e3"$/;"	v
+LIGHT_RED	.\src\RedoneWidgets.py	/^LIGHT_RED = "#b8746e"$/;"	v
+Location	.\src\Location.py	/^class Location(object):$/;"	c
+MENU_PHASE	.\src\Constants.py	/^MENU_PHASE = 0$/;"	v
+MOVEMENT	.\src\Constants.py	/^MOVEMENT = 0$/;"	v
+MOVE_ANT	.\src\Constants.py	/^MOVE_ANT = 0$/;"	v
+MOVE_COST	.\src\Constants.py	/^MOVE_COST = 0$/;"	v
+Move	.\src\AI\Booger.py	/^from Move import Move$/;"	i
+Move	.\src\AI\FoodGatherer.py	/^from Move import Move$/;"	i
+Move	.\src\AI\Random.py	/^from Move import Move$/;"	i
+Move	.\src\AI\degrood21_schendel21.py	/^from Move import Move$/;"	i
+Move	.\src\Move.py	/^class Move(object):$/;"	c
+NEUTRAL	.\src\Constants.py	/^NEUTRAL    = 2$/;"	v
+PLAYERS	.\src\SettingsPane.py	/^PLAYERS = []$/;"	v
+PLAYER_COLORS	.\src\SettingsPane.py	/^PLAYER_COLORS = [ "red", "blue" ] $/;"	v
+PLAYER_COLORS_LIGHT	.\src\SettingsPane.py	/^PLAYER_COLORS_LIGHT = [ wgt.LIGHT_RED, wgt.LIGHT_BLUE ]$/;"	v
+PLAYER_COLS	.\src\SettingsPane.py	/^PLAYER_COLS = 1 $/;"	v
+PLAYER_ONE	.\src\Constants.py	/^PLAYER_ONE = 0$/;"	v
+PLAYER_TWO	.\src\Constants.py	/^PLAYER_TWO = 1$/;"	v
+PLAY_PHASE	.\src\Constants.py	/^PLAY_PHASE = 3$/;"	v
+PauseConditionGUIData	.\src\SettingsPane.py	/^class PauseConditionGUIData () :$/;"	c
+PermanentlyStop	.\src\RedoneWidgets.py	/^    def PermanentlyStop(self) :$/;"	m	class:StopWatch
+Player	.\src\Game.py	/^from Player import Player$/;"	i
+Player	.\src\Player.py	/^class Player(object):$/;"	c
+PurpleBox	.\src\StatsPane.py	/^class PurpleBox ( tkinter.Frame ) :$/;"	c
+QUEEN	.\src\Constants.py	/^QUEEN = 0$/;"	v
+QuickStartFrame	.\src\SettingsPane.py	/^class QuickStartFrame ( tk.Frame ) :$/;"	c
+RANGE	.\src\Constants.py	/^RANGE = 3$/;"	v
+RED	.\src\RedoneWidgets.py	/^RED = "#c3473c"$/;"	v
+R_SOLDIER	.\src\Constants.py	/^R_SOLDIER = 4$/;"	v
+RedoneWidgets	.\src\GUIHandler.py	/^import RedoneWidgets$/;"	i
+Reset	.\src\RedoneWidgets.py	/^    def Reset(self):$/;"	m	class:StopWatch
+RoundRobinFrame	.\src\SettingsPane.py	/^class RoundRobinFrame ( tk.Frame ) :$/;"	c
+SETTINGS_FILE	.\src\SettingsPane.py	/^SETTINGS_FILE = "my-settings.json"$/;"	v
+SETUP_PHASE_1	.\src\Constants.py	/^SETUP_PHASE_1 = 1$/;"	v
+SETUP_PHASE_2	.\src\Constants.py	/^SETUP_PHASE_2 = 2$/;"	v
+SOLDIER	.\src\Constants.py	/^SOLDIER = 3$/;"	v
+ScrollableFrame	.\src\RedoneWidgets.py	/^class ScrollableFrame ( tk.Frame ) :$/;"	c
+ShowError	.\src\RedoneWidgets.py	/^def ShowError(title='Title', message='your message here.', root = None):$/;"	f
+ShowInfo	.\src\RedoneWidgets.py	/^def ShowInfo(title='Title', message='your message here.', root = None):$/;"	f
+ShowWarning	.\src\RedoneWidgets.py	/^def ShowWarning(title='Title', message='your message here.', root = None):$/;"	f
+SinglePlayerFrame	.\src\SettingsPane.py	/^class SinglePlayerFrame ( tk.Frame ) :$/;"	c
+Start	.\src\RedoneWidgets.py	/^    def Start(self):$/;"	m	class:StopWatch
+StatsPane	.\src\StatsPane.py	/^class StatsPane:$/;"	c
+Stop	.\src\RedoneWidgets.py	/^    def Stop(self):$/;"	m	class:StopWatch
+StopWatch	.\src\RedoneWidgets.py	/^class StopWatch(tk.Frame):$/;"	c
+TOURNAMENT_MODE	.\src\Constants.py	/^TOURNAMENT_MODE = 0$/;"	v
+TUNNEL	.\src\Constants.py	/^TUNNEL = -3$/;"	v
+Thread	.\src\Game.py	/^from threading import Thread$/;"	i
+TwoPlayerFrame	.\src\SettingsPane.py	/^class TwoPlayerFrame ( tk.Frame ) :$/;"	c
+UIbuttonPressed	.\src\GamePane.py	/^    def UIbuttonPressed(self):$/;"	m	class:GamePane
+UIbuttonPressed	.\src\StatsPane.py	/^    def UIbuttonPressed(self):$/;"	m	class:StatsPane
+UNDO	.\src\Constants.py	/^UNDO = 3$/;"	v
+UNIT_STATS	.\src\AI\Booger.py	/^from Ant import UNIT_STATS$/;"	i
+UNIT_STATS	.\src\AI\FoodGatherer.py	/^from Ant import UNIT_STATS$/;"	i
+UNIT_STATS	.\src\AI\Random.py	/^from Ant import UNIT_STATS$/;"	i
+UNIT_STATS	.\src\AI\degrood21_schendel21.py	/^from Ant import UNIT_STATS$/;"	i
+UNIT_STATS	.\src\Ant.py	/^UNIT_STATS = []$/;"	v
+WIDTH	.\src\StatsPane.py	/^WIDTH = 35$/;"	v
+WORKER	.\src\Constants.py	/^WORKER = 1$/;"	v
+__eq__	.\src\AIPlayerUtils.py	/^    def __eq__(self, other):$/;"	m	class:GraphNode	file:
+__hash__	.\src\AIPlayerUtils.py	/^    def __hash__(self):$/;"	m	class:GraphNode	file:
+__init__	.\Hello World.py	/^    def __init__(self, parent = None):$/;"	m	class:HelloUI
+__init__	.\src\AIPlayerUtils.py	/^    def __init__(self, parent=None, coords=None, f=0.0, g=0.0, h=0.0):$/;"	m	class:GraphNode
+__init__	.\src\AI\Booger.py	/^    def __init__(self, inputPlayerId):$/;"	m	class:AIPlayer
+__init__	.\src\AI\FoodGatherer.py	/^    def __init__(self, inputPlayerId):$/;"	m	class:AIPlayer
+__init__	.\src\AI\Random.py	/^    def __init__(self, inputPlayerId):$/;"	m	class:AIPlayer
+__init__	.\src\AI\degrood21_schendel21.py	/^    def __init__(self, inputPlayerId):$/;"	m	class:AIPlayer
+__init__	.\src\Ant.py	/^    def __init__(self, inputCoords, inputType, inputPlayer):$/;"	m	class:Ant
+__init__	.\src\Building.py	/^    def __init__(self, inputCoords, inputType, inputPlayer, captureHealth=None):$/;"	m	class:Building
+__init__	.\src\Construction.py	/^    def __init__(self, inputCoords, inputType):$/;"	m	class:Construction
+__init__	.\src\GUIHandler.py	/^    def __init__(self, game):$/;"	m	class:GUIHandler
+__init__	.\src\Game.py	/^    def __init__(self, p1: Player, p2: Player, numGames=1):$/;"	m	class:GameData
+__init__	.\src\Game.py	/^    def __init__(self, testing=False):$/;"	m	class:Game
+__init__	.\src\GamePane.py	/^    def __init__(self, handler, parent):$/;"	m	class:GamePane
+__init__	.\src\GamePane.py	/^    def __init__(self, parent, handler, x, y):$/;"	m	class:BoardButton
+__init__	.\src\GameState.py	/^    def __init__(self, inputBoard, inputInventories, inputPhase, inputTurn):$/;"	m	class:GameState
+__init__	.\src\HumanPlayer.py	/^    def __init__(self, inputPlayerId):$/;"	m	class:HumanPlayer
+__init__	.\src\Inventory.py	/^    def __init__(self, playerId, antArray, inputConstructions, inputFood):$/;"	m	class:Inventory
+__init__	.\src\Location.py	/^    def __init__(self, inputCoordinates):$/;"	m	class:Location
+__init__	.\src\Move.py	/^    def __init__(self, inputMoveType, inputCoordList = None, inputBuildType = None):$/;"	m	class:Move
+__init__	.\src\Player.py	/^    def __init__(self, inputPlayerId, inputAuthor):$/;"	m	class:Player
+__init__	.\src\RedoneWidgets.py	/^    def __init__ ( self, master, **kwargs ) :$/;"	m	class:ScrollableFrame
+__init__	.\src\RedoneWidgets.py	/^    def __init__(self, parent = None, text = "", backgroundcolor = "green",$/;"	m	class:ColoredButton
+__init__	.\src\RedoneWidgets.py	/^    def __init__(self, parent=None, **kw):$/;"	m	class:StopWatch
+__init__	.\src\SettingsPane.py	/^    def __init__ ( self, conditions = {}, players = [], box = None ) :$/;"	m	class:PauseConditionGUIData
+__init__	.\src\SettingsPane.py	/^    def __init__ ( self, game_type = "", num_games = 0, players = [], box = None ) :$/;"	m	class:GameGUIData
+__init__	.\src\SettingsPane.py	/^    def __init__ ( self, parent = None) :$/;"	m	class:AddPauseOptionsFrame
+__init__	.\src\SettingsPane.py	/^    def __init__ ( self, parent = None) :$/;"	m	class:AdditionalSettingsOptionsFrame
+__init__	.\src\SettingsPane.py	/^    def __init__ ( self, parent = None) :$/;"	m	class:BlueBox
+__init__	.\src\SettingsPane.py	/^    def __init__(self, handler, parent = None):$/;"	m	class:GameSettingsFrame
+__init__	.\src\SettingsPane.py	/^    def __init__(self, parent = None):$/;"	m	class:QuickStartFrame
+__init__	.\src\SettingsPane.py	/^    def __init__(self, parent = None):$/;"	m	class:RoundRobinFrame
+__init__	.\src\SettingsPane.py	/^    def __init__(self, parent = None):$/;"	m	class:TwoPlayerFrame
+__init__	.\src\SettingsPane.py	/^    def __init__(self, parent = None, p2Note = "Self"):$/;"	m	class:SinglePlayerFrame
+__init__	.\src\StatsPane.py	/^    def __init__ ( self, parent = None) :$/;"	m	class:PurpleBox
+__init__	.\src\StatsPane.py	/^    def __init__(self, handler, parent):$/;"	m	class:StatsPane
+__str__	.\src\AIPlayerUtils.py	/^    def __str__(self):$/;"	m	class:GraphNode	file:
+__str__	.\src\Move.py	/^    def __str__(self):$/;"	m	class:Move	file:
+_setTime	.\src\RedoneWidgets.py	/^    def _setTime(self, elap, string_obj):$/;"	m	class:StopWatch
+_update	.\src\RedoneWidgets.py	/^    def _update(self, string_obj, rate):$/;"	m	class:StopWatch
+a	.\src\Game.py	/^    a = Game()$/;"	v	class:Game
+aStarSearchPath	.\src\AIPlayerUtils.py	/^def aStarSearchPath(currentState, start, goal):$/;"	f
+addCheckOption	.\src\SettingsPane.py	/^    def addCheckOption ( self, name, text, row ) :$/;"	m	class:AdditionalSettingsOptionsFrame
+addCoords	.\src\AI\Booger.py	/^from GameState import addCoords$/;"	i
+addCoords	.\src\AI\FoodGatherer.py	/^from GameState import addCoords$/;"	i
+addCoords	.\src\GameState.py	/^def addCoords(tuple1, tuple2):$/;"	f
+addGameChanged	.\src\SettingsPane.py	/^    def addGameChanged ( self, option ) :$/;"	m	class:GameSettingsFrame
+addGameToLog	.\src\StatsPane.py	/^    def addGameToLog ( self ) :$/;"	m	class:StatsPane
+addLogItem	.\src\StatsPane.py	/^    def addLogItem ( self ) :$/;"	m	class:StatsPane
+addPlayer	.\src\Game.py	/^    def addPlayer(self, p: Player):$/;"	m	class:Game
+antTypeToStr	.\src\Constants.py	/^def antTypeToStr(type):$/;"	f
+app	.\Hello World.py	/^app = HelloUI(tk.Tk())$/;"	v
+approxDist	.\src\AIPlayerUtils.py	/^def approxDist(sourceCoords, targetCoords):$/;"	f
+argparse	.\src\Game.py	/^import argparse$/;"	i
+asciiPrintState	.\src\AIPlayerUtils.py	/^def asciiPrintState(state):$/;"	f
+askOKCancel	.\src\RedoneWidgets.py	/^def askOKCancel(title='Title', message='your message here.', root = None):$/;"	f
+askQuestion	.\src\RedoneWidgets.py	/^def askQuestion(title='Title', message='your message here.', root = None):$/;"	f
+base64	.\src\GUIHandler.py	/^import base64$/;"	i
+boardButtonPressed	.\src\GamePane.py	/^    def boardButtonPressed(self, x, y):$/;"	m	class:GamePane
+buildAnt	.\src\GamePane.py	/^    def buildAnt(self, ant):$/;"	m	class:GamePane
+buildTypeToStr	.\src\Constants.py	/^def buildTypeToStr(type):$/;"	f
+changeFrameQS	.\src\SettingsPane.py	/^    def changeFrameQS ( self ) :$/;"	m	class:GameSettingsFrame
+changeFrameStart	.\src\SettingsPane.py	/^    def changeFrameStart ( self ) :$/;"	m	class:GameSettingsFrame
+changePlayers	.\src\SettingsPane.py	/^    def changePlayers ( self, plyrs ) :$/;"	m	class:GameSettingsFrame
+charRepAnt	.\src\AIPlayerUtils.py	/^def charRepAnt(ant):$/;"	f
+charRepConstr	.\src\AIPlayerUtils.py	/^def charRepConstr(constr):$/;"	f
+charRepLoc	.\src\AIPlayerUtils.py	/^def charRepLoc(loc):$/;"	f
+checkBuildStart	.\src\Game.py	/^    def checkBuildStart(self, coord):$/;"	m	class:Game
+checkMovePath	.\src\Game.py	/^    def checkMovePath(self, fromCoord, toCoord):$/;"	m	class:Game
+checkMoveStart	.\src\Game.py	/^    def checkMoveStart(self, coord):$/;"	m	class:Game
+clearConstrs	.\src\GameState.py	/^    def clearConstrs(self):$/;"	m	class:GameState
+clearGameList	.\src\SettingsPane.py	/^    def clearGameList ( self ) :$/;"	m	class:GameSettingsFrame
+clearHighlights	.\src\GamePane.py	/^    def clearHighlights(self):$/;"	m	class:GamePane
+clearLog	.\src\StatsPane.py	/^    def clearLog(self):$/;"	m	class:StatsPane
+clearPCList	.\src\SettingsPane.py	/^    def clearPCList ( self ) :$/;"	m	class:GameSettingsFrame
+clicked	.\src\SettingsPane.py	/^    def clicked ( self, opt ) :$/;"	m	class:AdditionalSettingsOptionsFrame
+clone	.\src\Ant.py	/^    def clone(self):$/;"	m	class:Ant
+clone	.\src\Building.py	/^    def clone(self):$/;"	m	class:Building
+clone	.\src\Construction.py	/^    def clone(self):$/;"	m	class:Construction
+clone	.\src\GameState.py	/^    def clone(self):$/;"	m	class:GameState
+clone	.\src\Inventory.py	/^    def clone(self):$/;"	m	class:Inventory
+clone	.\src\Location.py	/^    def clone(self):$/;"	m	class:Location
+cnst	.\src\SettingsPane.py	/^import Constants as cnst$/;"	i
+compileAIs	.\src\MakeDistributable.py	/^def compileAIs():$/;"	f
+condWait	.\src\Game.py	/^    def condWait(self):$/;"	m	class:Game
+construct_path	.\src\AIPlayerUtils.py	/^def construct_path(node, antMovement):$/;"	f
+continueClose	.\src\GUIHandler.py	/^    def continueClose(self):$/;"	m	class:GUIHandler
+coordLookup	.\src\GameState.py	/^    def coordLookup(self, coords, playerId):$/;"	m	class:GameState
+copy	.\src\Game.py	/^import copy$/;"	i
+copy	.\src\GameState.py	/^import copy$/;"	i
+copy	.\src\SettingsPane.py	/^    def copy ( self ) :$/;"	m	class:GameGUIData
+copy	.\src\SettingsPane.py	/^import copy$/;"	i
+copyDict	.\src\SettingsPane.py	/^    def copyDict ( self ) :$/;"	m	class:PauseConditionGUIData
+createAICopy	.\src\Game.py	/^    def createAICopy(self, player):$/;"	m	class:Game
+createFrames	.\src\GamePane.py	/^    def createFrames(self):$/;"	m	class:GamePane
+createFrames	.\src\SettingsPane.py	/^    def createFrames ( self ) :$/;"	m	class:GameSettingsFrame
+createPathToward	.\src\AIPlayerUtils.py	/^def createPathToward(currentState, sourceCoords, targetCoords, movement):$/;"	f
+datetime	.\src\GUIHandler.py	/^import datetime$/;"	i
+deletePC	.\src\SettingsPane.py	/^    def deletePC ( self, pauseConditionGUIDataObj ) :$/;"	m	class:GameSettingsFrame
+deleteSingleGame	.\src\SettingsPane.py	/^    def deleteSingleGame ( self, gameGUIDataObj ) :$/;"	m	class:GameSettingsFrame
+disable	.\src\RedoneWidgets.py	/^    def disable(self):$/;"	m	class:ColoredButton
+disableHumanButtons	.\src\GUIHandler.py	/^    def disableHumanButtons(self):$/;"	m	class:GUIHandler
+enable	.\src\RedoneWidgets.py	/^    def enable(self):$/;"	m	class:ColoredButton
+enableAllButtons	.\src\GUIHandler.py	/^    def enableAllButtons(self):$/;"	m	class:GUIHandler
+endClient	.\src\Game.py	/^    def endClient(self):$/;"	m	class:Game
+endTurnPressed	.\src\GamePane.py	/^    def endTurnPressed(self, event=None):$/;"	m	class:GamePane
+error	.\src\Game.py	/^    def error(self, errorCode, info, player = None):$/;"	m	class:Game
+errorReport	.\src\Game.py	/^    def errorReport(self, msg):$/;"	m	class:Game
+exists	.\src\SettingsPane.py	/^from os.path import exists$/;"	i
+fastclone	.\src\GameState.py	/^    def fastclone(self):$/;"	m	class:GameState
+findPathRecursive	.\src\AIPlayerUtils.py	/^def findPathRecursive(state, source, target, movement, ignoresGrass):$/;"	f
+flashButton	.\src\RedoneWidgets.py	/^    def flashButton(self):$/;"	m	class:ColoredButton
+flipBoard	.\src\GameState.py	/^    def flipBoard(self):$/;"	m	class:GameState
+functools	.\src\Game.py	/^import functools$/;"	i
+gameAdded	.\src\SettingsPane.py	/^    def gameAdded ( self, t = None, n = None, p = None, box_needed = True ) :$/;"	m	class:GameSettingsFrame
+gameStartRequested	.\src\Game.py	/^    def gameStartRequested(self):$/;"	m	class:Game
+generalWake	.\src\Game.py	/^    def generalWake(self):$/;"	m	class:Game
+getAntAt	.\src\AIPlayerUtils.py	/^def getAntAt(state, coords) -> Ant:$/;"	f
+getAntList	.\src\AIPlayerUtils.py	/^def getAntList(currentState,$/;"	f
+getAntStats	.\src\InfoScraper.py	/^def getAntStats():$/;"	f
+getAnthill	.\src\Inventory.py	/^    def getAnthill(self):$/;"	m	class:Inventory
+getAttack	.\src\AI\Booger.py	/^    def getAttack(self, currentState, attackingAnt, enemyLocations):$/;"	m	class:AIPlayer
+getAttack	.\src\AI\FoodGatherer.py	/^    def getAttack(self, currentState, attackingAnt, enemyLocations):$/;"	m	class:AIPlayer
+getAttack	.\src\AI\Random.py	/^    def getAttack(self, currentState, attackingAnt, enemyLocations):$/;"	m	class:AIPlayer
+getAttack	.\src\AI\degrood21_schendel21.py	/^    def getAttack(self, currentState, attackingAnt, enemyLocations):$/;"	m	class:AIPlayer
+getAttack	.\src\HumanPlayer.py	/^    def getAttack(self, currentState, attackingAnt, enemyLocations):$/;"	m	class:HumanPlayer
+getAttack	.\src\Player.py	/^    def getAttack(self, currentState, attackingAnt, enemyLocations):$/;"	m	class:Player
+getBasicState	.\src\GameState.py	/^    def getBasicState():$/;"	m	class:GameState
+getBlankState	.\src\GameState.py	/^    def getBlankState():$/;"	m	class:GameState
+getConstrAt	.\src\AIPlayerUtils.py	/^def getConstrAt(state, coords):$/;"	f
+getConstrList	.\src\AIPlayerUtils.py	/^def getConstrList(currentState,$/;"	f
+getCurrPlayerFood	.\src\AIPlayerUtils.py	/^def getCurrPlayerFood(self, currentState):$/;"	f
+getCurrPlayerInventory	.\src\AIPlayerUtils.py	/^def getCurrPlayerInventory(currentState):$/;"	f
+getCurrPlayerQueen	.\src\AIPlayerUtils.py	/^def getCurrPlayerQueen(currentState):$/;"	f
+getEnemyInv	.\src\AIPlayerUtils.py	/^def getEnemyInv(self, currentState):$/;"	f
+getHotKeyInfo	.\src\InfoScraper.py	/^def getHotKeyInfo():$/;"	f
+getHumanAttack	.\src\GUIHandler.py	/^    def getHumanAttack(self, location):$/;"	m	class:GUIHandler
+getHumanMove	.\src\GUIHandler.py	/^    def getHumanMove(self, phase):$/;"	m	class:GUIHandler
+getMove	.\src\AI\Booger.py	/^    def getMove(self, currentState):$/;"	m	class:AIPlayer
+getMove	.\src\AI\FoodGatherer.py	/^    def getMove(self, currentState):$/;"	m	class:AIPlayer
+getMove	.\src\AI\Random.py	/^    def getMove(self, currentState):$/;"	m	class:AIPlayer
+getMove	.\src\AI\degrood21_schendel21.py	/^    def getMove(self, currentState):$/;"	m	class:AIPlayer
+getMove	.\src\HumanPlayer.py	/^    def getMove(self, currentState):$/;"	m	class:HumanPlayer
+getMove	.\src\Player.py	/^    def getMove(self, currentState):$/;"	m	class:Player
+getMoveCost	.\src\Location.py	/^    def getMoveCost(self):$/;"	m	class:Location
+getNextState	.\src\AIPlayerUtils.py	/^def getNextState(currentState, move):$/;"	f
+getNextStateAdversarial	.\src\AIPlayerUtils.py	/^def getNextStateAdversarial(currentState, move):$/;"	f
+getPCStr	.\src\SettingsPane.py	/^    def getPCStr ( self ) :$/;"	m	class:PauseConditionGUIData
+getPlacement	.\src\AI\Booger.py	/^    def getPlacement(self, currentState):$/;"	m	class:AIPlayer
+getPlacement	.\src\AI\FoodGatherer.py	/^    def getPlacement(self, currentState):$/;"	m	class:AIPlayer
+getPlacement	.\src\AI\Random.py	/^    def getPlacement(self, currentState):$/;"	m	class:AIPlayer
+getPlacement	.\src\AI\degrood21_schendel21.py	/^    def getPlacement(self, currentState):$/;"	m	class:AIPlayer
+getPlacement	.\src\HumanPlayer.py	/^    def getPlacement(self, currentState):$/;"	m	class:HumanPlayer
+getPlacement	.\src\Player.py	/^    def getPlacement(self, currentState):$/;"	m	class:Player
+getQueen	.\src\Inventory.py	/^    def getQueen(self):$/;"	m	class:Inventory
+getTunnels	.\src\Inventory.py	/^    def getTunnels(self):$/;"	m	class:Inventory
+getWinner	.\src\AIPlayerUtils.py	/^def getWinner(currentState):$/;"	f
+get_move	.\src\Game.py	/^    def get_move(self, currentPlayer, theState):$/;"	m	class:Game
+get_num_games	.\src\SettingsPane.py	/^    def get_num_games ( self ) :$/;"	m	class:QuickStartFrame
+get_num_games	.\src\SettingsPane.py	/^    def get_num_games ( self ) :$/;"	m	class:RoundRobinFrame
+get_num_games	.\src\SettingsPane.py	/^    def get_num_games ( self ) :$/;"	m	class:SinglePlayerFrame
+get_num_games	.\src\SettingsPane.py	/^    def get_num_games ( self ) :$/;"	m	class:TwoPlayerFrame
+get_players	.\src\SettingsPane.py	/^    def get_players ( self ) :$/;"	m	class:QuickStartFrame
+get_players	.\src\SettingsPane.py	/^    def get_players ( self ) :$/;"	m	class:RoundRobinFrame
+get_players	.\src\SettingsPane.py	/^    def get_players ( self ) :$/;"	m	class:SinglePlayerFrame
+get_players	.\src\SettingsPane.py	/^    def get_players ( self ) :$/;"	m	class:TwoPlayerFrame
+giveGame	.\src\GamePane.py	/^    def giveGame(self, the_game):$/;"	m	class:GamePane
+giveGame	.\src\SettingsPane.py	/^    def giveGame ( self, the_game ) :$/;"	m	class:GameSettingsFrame
+goodbyePressed	.\Hello World.py	/^    def goodbyePressed(self):$/;"	m	class:HelloUI
+handleAttackMove	.\src\GamePane.py	/^    def handleAttackMove(self, x, y):$/;"	m	class:GamePane
+handleNormalMove	.\src\GamePane.py	/^    def handleNormalMove(self, x, y):$/;"	m	class:GamePane
+handleSetup1Move	.\src\GamePane.py	/^    def handleSetup1Move(self, x, y):$/;"	m	class:GamePane
+handleSetup2Move	.\src\GamePane.py	/^    def handleSetup2Move(self, x, y):$/;"	m	class:GamePane
+hasWon	.\src\Game.py	/^    def hasWon(self, playerId):$/;"	m	class:Game
+helloPressed	.\Hello World.py	/^    def helloPressed(self):$/;"	m	class:HelloUI
+heuristicStepsToGoal	.\src\AI\degrood21_schendel21.py	/^    def heuristicStepsToGoal(self, currentState):$/;"	m	class:AIPlayer
+highlightValidAttacks	.\src\GamePane.py	/^    def highlightValidAttacks(self, ant: Ant):$/;"	m	class:GamePane
+highlightValidMoves	.\src\GamePane.py	/^    def highlightValidMoves(self, location, moveLeft, queen = False, ignoresGrass = False):$/;"	m	class:GamePane
+hotKeyUndo	.\src\GUIHandler.py	/^    def hotKeyUndo(self, event=None):$/;"	m	class:GUIHandler
+importlib	.\src\Game.py	/^import importlib$/;"	i
+importlib	.\src\MakeDistributable.py	/^import importlib$/;"	i
+isInEnemyTerritory	.\src\Game.py	/^    def isInEnemyTerritory(self, coord):$/;"	m	class:Game
+isInHomeTerritory	.\src\Game.py	/^    def isInHomeTerritory(self, coord):$/;"	m	class:Game
+isPathOkForQueen	.\src\AIPlayerUtils.py	/^def isPathOkForQueen(path):$/;"	f
+isValidAttack	.\src\Game.py	/^    def isValidAttack(self, attackingAnt, attackCoord):$/;"	m	class:Game
+isValidCoord	.\src\Game.py	/^    def isValidCoord(self, coord):$/;"	m	class:Game
+isValidMove	.\src\Game.py	/^    def isValidMove(self, move):$/;"	m	class:Game
+isValidPlacement	.\src\Game.py	/^    def isValidPlacement(self, items, targets):$/;"	m	class:Game
+is_box_needed	.\src\SettingsPane.py	/^    def is_box_needed ( self ) :$/;"	m	class:QuickStartFrame
+is_box_needed	.\src\SettingsPane.py	/^    def is_box_needed ( self ) :$/;"	m	class:RoundRobinFrame
+is_box_needed	.\src\SettingsPane.py	/^    def is_box_needed ( self ) :$/;"	m	class:SinglePlayerFrame
+is_box_needed	.\src\SettingsPane.py	/^    def is_box_needed ( self ) :$/;"	m	class:TwoPlayerFrame
+json	.\src\SettingsPane.py	/^import json$/;"	i
+kill	.\src\Game.py	/^    def kill(self):$/;"	m	class:Game
+killPressed	.\src\GUIHandler.py	/^    def killPressed(self):$/;"	m	class:GUIHandler
+layoutChanged	.\src\SettingsPane.py	/^    def layoutChanged ( self, option ) :$/;"	m	class:AdditionalSettingsOptionsFrame
+legalCoord	.\src\AIPlayerUtils.py	/^def legalCoord(coord):$/;"	f
+listAdjacent	.\src\AIPlayerUtils.py	/^def listAdjacent(coord):$/;"	f
+listAllBuildMoves	.\src\AIPlayerUtils.py	/^def listAllBuildMoves(currentState):$/;"	f
+listAllLegalMoves	.\src\AIPlayerUtils.py	/^def listAllLegalMoves(currentState):$/;"	f
+listAllMovementMoves	.\src\AIPlayerUtils.py	/^def listAllMovementMoves(currentState):$/;"	f
+listAllMovementPaths	.\src\AIPlayerUtils.py	/^def listAllMovementPaths(currentState, coords, movement, ignoresGrass = False):$/;"	f
+listAttackable	.\src\AIPlayerUtils.py	/^def listAttackable(coord, dist = 1):$/;"	f
+listReachableAdjacent	.\src\AIPlayerUtils.py	/^def listReachableAdjacent(state, coords, movement, ignoresGrass = False):$/;"	f
+loadAIs	.\src\Game.py	/^    def loadAIs(self):$/;"	m	class:Game
+loadSavedSettings	.\src\SettingsPane.py	/^    def loadSavedSettings ( self ) :$/;"	m	class:GameSettingsFrame
+loadSecret	.\src\GUIHandler.py	/^    def loadSecret(self, secret):$/;"	m	class:GUIHandler
+makeDistrib	.\src\MakeDistributable.py	/^def makeDistrib():$/;"	f
+makeWidgets	.\src\RedoneWidgets.py	/^    def makeWidgets(self):$/;"	m	class:StopWatch
+math	.\src\Game.py	/^import os, re, sys, math, multiprocessing, time, random$/;"	i
+messagebox	.\src\RedoneWidgets.py	/^from tkinter import messagebox$/;"	i
+messagebox	.\src\SettingsPane.py	/^from tkinter import messagebox$/;"	i
+moveTypeToStr	.\src\Constants.py	/^def moveTypeToStr(type):$/;"	f
+multiprocessing	.\src\Game.py	/^import os, re, sys, math, multiprocessing, time, random$/;"	i
+neighbors	.\src\AIPlayerUtils.py	/^def neighbors(currentState, node, goal, ign_grass, antMovement):$/;"	f
+newSelection	.\src\SettingsPane.py	/^    def newSelection ( self, value, idx ) :$/;"	m	class:AddPauseOptionsFrame
+onClose	.\src\GUIHandler.py	/^    def onClose(self):$/;"	m	class:GUIHandler
+os	.\src\GUIHandler.py	/^import os$/;"	i
+os	.\src\Game.py	/^import os, re, sys, math, multiprocessing, time, random$/;"	i
+os	.\src\GamePane.py	/^import os$/;"	i
+os	.\src\MakeDistributable.py	/^import os$/;"	i
+os	.\src\StatsPane.py	/^import os$/;"	i
+partial	.\src\Game.py	/^from functools import partial$/;"	i
+partial	.\src\GamePane.py	/^from functools import partial$/;"	i
+partial	.\src\RedoneWidgets.py	/^from functools import partial$/;"	i
+partial	.\src\SettingsPane.py	/^from functools import partial$/;"	i
+pauseConditionAdded	.\src\SettingsPane.py	/^    def pauseConditionAdded ( self, c = None, p = None ) :$/;"	m	class:GameSettingsFrame
+pauseConditionReached	.\src\Game.py	/^    def pauseConditionReached(self):$/;"	m	class:Game
+pauseGame	.\src\Game.py	/^    def pauseGame(self):$/;"	m	class:Game
+pausePressed	.\src\GUIHandler.py	/^    def pausePressed(self, event=None):$/;"	m	class:GUIHandler
+pickle	.\src\GUIHandler.py	/^import pickle$/;"	i
+platform	.\src\GUIHandler.py	/^from sys import platform$/;"	i
+platform	.\src\StatsPane.py	/^from sys import platform$/;"	i
+postProcessCommandLine	.\src\Game.py	/^    def postProcessCommandLine(self):$/;"	m	class:Game
+post_process_settings	.\src\Game.py	/^    def post_process_settings(self):$/;"	m	class:Game
+pressed	.\src\GamePane.py	/^    def pressed(self, event):$/;"	m	class:BoardButton
+pressed	.\src\RedoneWidgets.py	/^    def pressed(self, thing):$/;"	m	class:ColoredButton
+printTournament	.\src\Game.py	/^    def printTournament(self):$/;"	m	class:Game
+printable	.\src\InfoScraper.py	/^from string import printable$/;"	i
+processCommandLine	.\src\Game.py	/^    def processCommandLine(self):$/;"	m	class:Game
+process_settings	.\src\Game.py	/^    def process_settings(self, games, additional, pauseConditions, testing = False):$/;"	m	class:Game
+random	.\src\AIPlayerUtils.py	/^import random$/;"	i
+random	.\src\AI\Booger.py	/^import random$/;"	i
+random	.\src\AI\FoodGatherer.py	/^import random$/;"	i
+random	.\src\AI\Random.py	/^import random$/;"	i
+random	.\src\AI\degrood21_schendel21.py	/^import random$/;"	i
+random	.\src\Game.py	/^import os, re, sys, math, multiprocessing, time, random$/;"	i
+random	.\src\GamePane.py	/^import random$/;"	i
+random	.\src\StatsPane.py	/^import random$/;"	i
+randomBoard	.\src\GamePane.py	/^    def randomBoard(self):$/;"	m	class:GamePane
+re	.\src\GUIHandler.py	/^import re$/;"	i
+re	.\src\Game.py	/^import os, re, sys, math, multiprocessing, time, random$/;"	i
+re	.\src\InfoScraper.py	/^import re$/;"	i
+re	.\src\SettingsPane.py	/^import re$/;"	i
+reDraw	.\src\GamePane.py	/^    def reDraw(self):$/;"	m	class:BoardButton
+reDrawBoard	.\src\GUIHandler.py	/^    def reDrawBoard(self):$/;"	m	class:GUIHandler
+regGPressed	.\src\GUIHandler.py	/^    def regGPressed(self, event = None):$/;"	m	class:GUIHandler
+registerWin	.\src\AI\Booger.py	/^    def registerWin(self, hasWon):$/;"	m	class:AIPlayer
+registerWin	.\src\AI\FoodGatherer.py	/^    def registerWin(self, hasWon):$/;"	m	class:AIPlayer
+registerWin	.\src\AI\Random.py	/^    def registerWin(self, hasWon):$/;"	m	class:AIPlayer
+registerWin	.\src\AI\degrood21_schendel21.py	/^    def registerWin(self, hasWon):$/;"	m	class:AIPlayer
+registerWin	.\src\Player.py	/^    def registerWin(self, hasWon):$/;"	m	class:Player
+relevantPlayers	.\src\Game.py	/^    def relevantPlayers(self, players):$/;"	m	class:Game
+reloadAgentPressed	.\src\GUIHandler.py	/^    def reloadAgentPressed(self):$/;"	m	class:GUIHandler
+resetSettings	.\src\SettingsPane.py	/^    def resetSettings ( self ):$/;"	m	class:GameSettingsFrame
+resolveAttack	.\src\Game.py	/^    def resolveAttack(self, attackingAnt, currentPlayer):$/;"	m	class:Game
+resolveEndGame	.\src\Game.py	/^    def resolveEndGame(self):$/;"	m	class:Game
+restart	.\src\Game.py	/^    def restart(self):$/;"	m	class:Game
+restartFromEnd	.\src\Game.py	/^    def restartFromEnd(self):$/;"	m	class:Game
+restartPressed	.\src\GUIHandler.py	/^    def restartPressed(self):$/;"	m	class:GUIHandler
+runGame	.\src\Game.py	/^    def runGame(self):$/;"	m	class:Game
+saveSettings	.\src\SettingsPane.py	/^    def saveSettings ( self ):$/;"	m	class:GameSettingsFrame
+secret2Pressed	.\src\GUIHandler.py	/^    def secret2Pressed(self, event = None):$/;"	m	class:GUIHandler
+secretPressed	.\src\GUIHandler.py	/^    def secretPressed(self, event = None):$/;"	m	class:GUIHandler
+selectAllPlayers	.\src\SettingsPane.py	/^    def selectAllPlayers ( self ) :$/;"	m	class:QuickStartFrame
+selectAllPlayers	.\src\SettingsPane.py	/^    def selectAllPlayers ( self ) :$/;"	m	class:RoundRobinFrame
+setCurLogItemOver	.\src\StatsPane.py	/^    def setCurLogItemOver(self):$/;"	m	class:StatsPane
+setImage	.\src\GamePane.py	/^    def setImage(self, construct = -9, ant = -9, antTeam = -9, constTeam = -9, moved = -9, health = -9, highlight = -9, attackHighlight = -9, carrying = -9, healthConst = -9):$/;"	m	class:BoardButton
+setInstructionText	.\src\GamePane.py	/^    def setInstructionText(self, text: str):$/;"	m	class:GamePane
+setPlayers	.\src\GUIHandler.py	/^    def setPlayers(self, p1, p2):$/;"	m	class:GUIHandler
+setScoreRecord	.\src\StatsPane.py	/^    def setScoreRecord ( self, s ) :$/;"	m	class:StatsPane
+setSeasonalGraphics	.\src\GUIHandler.py	/^    def setSeasonalGraphics(self, event = None):$/;"	m	class:GUIHandler
+setTextLines	.\src\SettingsPane.py	/^    def setTextLines ( self, textArray ) :$/;"	m	class:BlueBox
+setTextLines	.\src\StatsPane.py	/^    def setTextLines ( self, textArray ) :$/;"	m	class:PurpleBox
+setToGameState	.\src\GamePane.py	/^    def setToGameState(self, state: GameState):$/;"	m	class:GamePane
+setTopText	.\src\SettingsPane.py	/^    def setTopText ( self, txt ) :$/;"	m	class:BlueBox
+setWinner	.\src\Game.py	/^    def setWinner(self, id):$/;"	m	class:Game
+set_scrollregion	.\src\RedoneWidgets.py	/^    def set_scrollregion(self, event=None, vertical_buff = 0):$/;"	m	class:ScrollableFrame
+settingsPressed	.\src\GUIHandler.py	/^    def settingsPressed(self):$/;"	m	class:GUIHandler
+setup	.\src\Game.py	/^    def setup(self, game, count):$/;"	m	class:Game
+showFrame	.\src\GUIHandler.py	/^    def showFrame(self, frameNum):$/;"	m	class:GUIHandler
+showSetupConstructions	.\src\GamePane.py	/^    def showSetupConstructions(self, phase):$/;"	m	class:GamePane
+showState	.\src\GUIHandler.py	/^    def showState(self, state):$/;"	m	class:GUIHandler
+shutil	.\src\MakeDistributable.py	/^import shutil$/;"	i
+start	.\src\Game.py	/^    def start(self):$/;"	m	class:Game
+startAIvsAI	.\src\Game.py	/^    def startAIvsAI(self, numGames, player1, player2):$/;"	m	class:Game
+startAllOther	.\src\Game.py	/^    def startAllOther(self, numGames, playerOne):$/;"	m	class:Game
+startCurLogItem	.\src\StatsPane.py	/^    def startCurLogItem(self):$/;"	m	class:StatsPane
+startHumanVsAI	.\src\Game.py	/^    def startHumanVsAI(self, givenPlayer):$/;"	m	class:Game
+startRR	.\src\Game.py	/^    def startRR(self, numGames, givenPlayers):$/;"	m	class:Game
+startRRall	.\src\Game.py	/^    def startRRall(self, numGames):$/;"	m	class:Game
+startSelf	.\src\Game.py	/^    def startSelf(self, numGames, playerOne):$/;"	m	class:Game
+statsPressed	.\src\GUIHandler.py	/^    def statsPressed(self):$/;"	m	class:GUIHandler
+stepPressed	.\src\GUIHandler.py	/^    def stepPressed(self, event=None):$/;"	m	class:GUIHandler
+stepsToReach	.\src\AIPlayerUtils.py	/^def stepsToReach(currentState, src, dst):$/;"	f
+stopCurLogItem	.\src\StatsPane.py	/^    def stopCurLogItem(self, game_over = False):$/;"	m	class:StatsPane
+submitHumanAttack	.\src\GUIHandler.py	/^    def submitHumanAttack(self, attack):$/;"	m	class:GUIHandler
+submitHumanAttack	.\src\Game.py	/^    def submitHumanAttack(self, attack):$/;"	m	class:Game
+submitHumanMove	.\src\GUIHandler.py	/^    def submitHumanMove(self, move):$/;"	m	class:GUIHandler
+submitHumanMove	.\src\Game.py	/^    def submitHumanMove(self, move):$/;"	m	class:Game
+submitHumanSetup	.\src\GUIHandler.py	/^    def submitHumanSetup(self, locations):$/;"	m	class:GUIHandler
+submitHumanSetup	.\src\Game.py	/^    def submitHumanSetup(self, locations):$/;"	m	class:Game
+subtractCoords	.\src\GameState.py	/^def subtractCoords(tuple1, tuple2):$/;"	f
+sys	.\src\AI\Booger.py	/^import sys$/;"	i
+sys	.\src\AI\FoodGatherer.py	/^import sys$/;"	i
+sys	.\src\AI\Random.py	/^import sys$/;"	i
+sys	.\src\AI\degrood21_schendel21.py	/^import sys$/;"	i
+sys	.\src\Game.py	/^import os, re, sys, math, multiprocessing, time, random$/;"	i
+sys	.\src\MakeDistributable.py	/^import sys$/;"	i
+threading	.\src\Game.py	/^import threading$/;"	i
+threading	.\src\SettingsPane.py	/^import threading$/;"	i
+time	.\src\Game.py	/^import os, re, sys, math, multiprocessing, time, random$/;"	i
+time	.\src\Game.py	/^import time$/;"	i
+time	.\src\RedoneWidgets.py	/^import time$/;"	i
+time	.\src\SettingsPane.py	/^import time$/;"	i
+time	.\src\StatsPane.py	/^import time$/;"	i
+timeChanged	.\src\SettingsPane.py	/^    def timeChanged ( self, sv  ) :$/;"	m	class:AdditionalSettingsOptionsFrame
+tk	.\Hello World.py	/^import tkinter as tk$/;"	i
+tk	.\src\RedoneWidgets.py	/^import tkinter as tk$/;"	i
+tk	.\src\SettingsPane.py	/^import tkinter as tk$/;"	i
+tkinter	.\src\GUIHandler.py	/^import tkinter$/;"	i
+tkinter	.\src\GamePane.py	/^import tkinter$/;"	i
+tkinter	.\src\StatsPane.py	/^import tkinter$/;"	i
+tournamentStr	.\src\Game.py	/^    def tournamentStr(self, current=True):$/;"	m	class:Game
+traceback	.\src\Game.py	/^import traceback$/;"	i
+truncateName	.\src\Game.py	/^    def truncateName(self, name, size = 11):$/;"	m	class:Game
+ttk	.\src\RedoneWidgets.py	/^from tkinter import ttk$/;"	i
+ttk	.\src\SettingsPane.py	/^from tkinter import ttk$/;"	i
+undoPressed	.\src\GamePane.py	/^    def undoPressed(self):$/;"	m	class:GamePane
+updateCurLogItem	.\src\StatsPane.py	/^    def updateCurLogItem(self, s):$/;"	m	class:StatsPane
+wgt	.\src\GamePane.py	/^import RedoneWidgets as wgt$/;"	i
+wgt	.\src\SettingsPane.py	/^import RedoneWidgets as wgt$/;"	i
+wgt	.\src\StatsPane.py	/^import RedoneWidgets as wgt$/;"	i
