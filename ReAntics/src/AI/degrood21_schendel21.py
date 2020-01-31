@@ -113,7 +113,7 @@ class AIPlayer(Player):
     #Return: Best move from the moves in nodes
     ##
     def bestMove(self, nodes):
-        
+      return None
     
     ##
     #getAttack
