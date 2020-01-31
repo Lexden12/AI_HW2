@@ -95,7 +95,6 @@ class AIPlayer(Player):
     #Return: The Move to be made
     ##
     def getMove(self, currentState):
-<<<<<<< HEAD
         print(self.heuristicStepsToGoal(currentState))
         moves = listAllLegalMoves(currentState)
         for move in moves:
@@ -115,17 +114,6 @@ class AIPlayer(Player):
     ##
     def bestMove(self, nodes):
         
-=======
-        moves = listAllLegalMoves(currentState)
-        selectedMove = moves[random.randint(0,len(moves) - 1)];
-
-        #don't do a build move if there are already 3+ ants
-        numAnts = len(currentState.inventories[currentState.whoseTurn].ants)
-        while (selectedMove.moveType == BUILD and numAnts >= 3):
-            selectedMove = moves[random.randint(0,len(moves) - 1)];
-            
-        return selectedMove
->>>>>>> 4a4ee0c06ce3c583c8397835d281ed2101010b62
     
     ##
     #getAttack
@@ -159,7 +147,6 @@ class AIPlayer(Player):
     #                 i.e. the board will not be needed/used
     ##
     def heuristicStepsToGoal(self, currentState):
-<<<<<<< HEAD
       myState = currentState.fastclone()
       me = myState.whoseTurn
       enemy = abs(me - 1)
@@ -235,8 +222,3 @@ class Node:
     self.depth = 0
     self.steps = steps + self.depth
     self.parent = parent
-=======
-
-
-
->>>>>>> 4a4ee0c06ce3c583c8397835d281ed2101010b62
