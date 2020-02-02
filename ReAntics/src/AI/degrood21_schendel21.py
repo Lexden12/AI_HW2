@@ -107,20 +107,6 @@ class AIPlayer(Player):
           nodes.append(node)
         
         bestNode = self.bestMove(nodes)
-        count = 0
-        for node in nodes:
-          if bestNode.steps == node.steps:
-            count += 1
-        print("STEPS: " + str(bestNode.steps))
-        print("COUNT: " + str(count))
-        print("NODES SIZE: " + str(len(nodes)))
-        if count >= len(nodes) - 1:
-          for node in nodes:
-              if node.steps == bestNode.steps:
-                print("HERE")
-                bestNode = node
-                break
-                
         return bestNode.move
 
     ##
@@ -190,23 +176,27 @@ class AIPlayer(Player):
       foods = getConstrList(myState, None, (FOOD,))
 
       myWorkers = getAntList(myState, me, (WORKER,))
-      myOffense = getAntList(myState, me, (SOLDIER, R_SOLDIER, DRONE))
-      shortest = 1000
+      myOffense = getAntList(myState, me, (SOLDIER,))
+      enemyWorkers = getAntList(myState, enemy, (WORKER,))
+      dist = 1000
       for ant in myOffense:
-        dist = stepsToReach(myState, ant.coords, enemyHill.coords)
-        if dist < shortest:
-          shortest = dist
-      occupyWin = shortest + enemyHill.captureHealth
+        if len(enemyWorkers) == 0:
+          dist = stepsToReach(myState, ant.coords, enemyHill.coords)
+        else:
+          dist = stepsToReach(myState, ant.coords, enemyWorkers[0].coords) + 10
+      occupyWin = (dist) + (enemyHill.captureHealth)
 
-      food_times = []
+      food_time = 30
+      isTunnel = False
       for w in myWorkers:
         if w.carrying:
           #We must check every worker and the distance between the anthill and the tunnel.
           #in order to decide which one is quicker to go to. 
           distanceToTunnel = stepsToReach(myState, w.coords, myTunnel.coords)
           distanceToHill = stepsToReach(myState, w.coords, myHill.coords)
+          isTunnel = True if distanceToTunnel < distanceToHill else False
           min_dist = min(distanceToTunnel, distanceToHill)
-          food_times.append(min_dist)
+          food_time = min_dist
 
         #Otherwise, we want to move toward the food
         else:
@@ -219,28 +209,36 @@ class AIPlayer(Player):
             if distanceToFood[i] < min_food:
               min_food = distanceToFood[i]
               idx = i
-          distanceToTunnel = stepsToReach(myState, foods[i].coords, myTunnel.coords)
-          distanceToHill = stepsToReach(myState, foods[i].coords, myHill.coords)
+          distanceToTunnel = stepsToReach(myState, foods[idx].coords, myTunnel.coords)
+          distanceToHill = stepsToReach(myState, foods[idx].coords, myHill.coords)
           min_dist = min(distanceToTunnel, distanceToHill) + min_food
-          food_times.append(min_dist)
+          food_time = min_dist
       
-      foodDists = []
-      for food in foods:
-        distanceToTunnel = stepsToReach(myState, food.coords, myTunnel.coords)
-        distanceToHill = stepsToReach(myState, food.coords, myHill.coords)
-        foodDists.append(min(distanceToTunnel, distanceToHill))
-      foodDist = min(foodDists) * 2
+      food_time2 = 0
+      times = []
+      if len(myWorkers) > 0:
+        for food in foods:
+          if myWorkers[0].carrying:
+            times.append(stepsToReach(myState, food.coords, myTunnel.coords if isTunnel else myHill.coords))
+          else:
+            distanceToTunnel = stepsToReach(myState, food.coords, myTunnel.coords)
+            distanceToHill = stepsToReach(myState, food.coords, myHill.coords)
+            times.append(min(distanceToTunnel, distanceToHill))
+        food_time2 = 2 * min(times)
       
       foodWin = 0
       foodNeeded = 11 - myFood
       while foodNeeded > 0:
-        if len(food_times) > 0:
-          foodWin += min(food_times)
-          food_times.remove(min(food_times))
+        if food_time != -1:
+          foodWin += food_time
         else:
-          foodWin += foodDist
+          foodWin += food_time2
+        food_time = -1
         foodNeeded -= 1
-      return min(foodWin, occupyWin)
+      steps = min(foodWin, occupyWin)
+      steps += 0 if myFood > 2 else 10
+      steps += 0 if len(myWorkers) == 1 else 10
+      return steps
 
 class Node:
   def __init__(self, move, state, depth, steps, parent):
