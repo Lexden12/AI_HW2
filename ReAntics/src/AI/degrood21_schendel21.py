@@ -95,12 +95,33 @@ class AIPlayer(Player):
     #Return: The Move to be made
     ##
     def getMove(self, currentState):
-        print(self.heuristicStepsToGoal(currentState))
         moves = listAllLegalMoves(currentState)
-        for move in moves:
-          getNextState(currentState, move)
+        futureStates = []
+        nodes = []
 
-        return selectedMove
+        for move in moves:
+          nextState = getNextState(currentState, move)
+          futureStates.append(nextState)
+          steps = self.heuristicStepsToGoal(nextState)
+          node = Node(move,nextState,0,steps,None)
+          nodes.append(node)
+        
+        bestNode = self.bestMove(nodes)
+        count = 0
+        for node in nodes:
+          if bestNode.steps == node.steps:
+            count += 1
+        print("STEPS: " + str(bestNode.steps))
+        print("COUNT: " + str(count))
+        print("NODES SIZE: " + str(len(nodes)))
+        if count >= len(nodes) - 1:
+          for node in nodes:
+              if node.steps == bestNode.steps:
+                print("HERE")
+                bestNode = node
+                break
+                
+        return bestNode.move
 
     ##
     #bestMove
@@ -110,10 +131,16 @@ class AIPlayer(Player):
     #   nodes - List of nodes which contain the possible moves from this location and their rank
     #           Used to find the best move
     #
-    #Return: Best move from the moves in nodes
+    #Return: Best node from the evalutaion in each node
     ##
     def bestMove(self, nodes):
-      return None
+      bestEval = nodes[0].steps
+      bestNode = nodes[0]
+      for node in nodes:
+        if node.steps < bestEval:
+          bestEval = node.steps 
+          bestNode = node
+      return bestNode
     
     ##
     #getAttack
@@ -217,7 +244,7 @@ class AIPlayer(Player):
 
 class Node:
   def __init__(self, move, state, depth, steps, parent):
-    self.move = moved
+    self.move = move
     self.state = state
     self.depth = 0
     self.steps = steps + self.depth
