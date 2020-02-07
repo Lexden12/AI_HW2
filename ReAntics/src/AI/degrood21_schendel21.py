@@ -95,19 +95,26 @@ class AIPlayer(Player):
     #Return: The Move to be made
     ##
     def getMove(self, currentState):
-        moves = listAllLegalMoves(currentState)
-        futureStates = []
-        nodes = []
-
-        for move in moves:
-          nextState = getNextState(currentState, move)
-          futureStates.append(nextState)
-          steps = self.heuristicStepsToGoal(nextState)
-          node = Node(move,nextState,0,steps,None)
-          nodes.append(node)
-        
-        bestNode = self.bestMove(nodes)
-        return bestNode.move
+        frontierNodes = []
+        expandedNodes = []
+        steps = self.heuristicStepsToGoal(currentState)
+        root = Node(None,currentState,0,steps,None)
+        frontierNodes.append(root)
+        leastNode = None
+        leastScore = None
+        while True:
+          leastNode = self.bestMove(frontierNodes)
+          leastScore = leastNode.steps
+          print(leastScore)
+          if leastScore == leastNode.depth:
+            break
+          frontierNodes.remove(leastNode)
+          expandedNodes.append(leastNode)
+          frontierNodes.extend(self.expandNode(leastNode))
+        while not leastNode.depth == 1:
+          print(leastNode)
+          leastNode = leastNode.parent
+        return leastNode.move
 
     ##
     #bestMove
@@ -124,9 +131,20 @@ class AIPlayer(Player):
       bestNode = nodes[0]
       for node in nodes:
         if node.steps < bestEval:
-          bestEval = node.steps 
+          bestEval = node.steps
           bestNode = node
       return bestNode
+
+    def expandNode(self, node):
+      moves = listAllLegalMoves(node.state)
+      nodes = []
+      for move in moves:
+        nextState = getNextState(node.state, move)
+        steps = self.heuristicStepsToGoal(nextState)
+        newNode = Node(move,nextState,node.depth+1,steps,node)
+        nodes.append(newNode)
+      return nodes
+
     
     ##
     #getAttack
