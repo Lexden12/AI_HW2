@@ -254,8 +254,8 @@ class AIPlayer(Player):
           if not enemyQueen == None:
             dist = stepsToReach(myState, ant.coords, enemyHill.coords)
         else:
-          dist = stepsToReach(myState, ant.coords, enemyWorkers[0].coords)
-          if len(enemyWorkers) > 1 or dist > 1:
+          dist = stepsToReach(myState, ant.coords, enemyWorkers[0].coords) + 10
+          if len(enemyWorkers) > 1:
             dist += 10
 
       occupyWin += (dist) + (enemyHill.captureHealth)
