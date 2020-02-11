@@ -29,7 +29,7 @@ class AIPlayer(Player):
     #   cpy           - whether the player is a copy (when playing itself)
     ##
     def __init__(self, inputPlayerId):
-        super(AIPlayer, self).__init__(inputPlayerId, "Search")
+        super(AIPlayer, self).__init__(inputPlayerId, "A*_Search")
 
     ##
     #getPlacement
@@ -74,7 +74,7 @@ class AIPlayer(Player):
                     #Choose any x location
                     x = random.randint(0, 9)
                     #Choose any y location on enemy side of the board
-                    y = random.randint(6, 9)
+                    y = random.randint(6, 7)
                     #Set the move if this space is empty
                     if currentState.board[x][y].constr == None and (x, y) not in moves:
                         move = (x, y)
@@ -101,48 +101,24 @@ class AIPlayer(Player):
         root = Node(None, currentState, 0, 0, None)
         frontierNodes.append(root)
 
+        # For loops goes until set depth
+        # in this case a depth of 3 
         for x in range(3):
           frontierNodes.sort(key=self.sortAttr)
           leastNode = root
           leastNode = self.bestMove(frontierNodes)
-          # for node in frontierNodes:
-          #   if node.steps < leastNode.steps:
-          #     leastNode = node
           frontierNodes.remove(leastNode)
           if len(frontierNodes) >= 50:
             frontierNodes = frontierNodes[:50]
           frontierNodes.extend(self.expandNode(leastNode))
           root = frontierNodes[0]
 
+        # after finding best path return to
+        # first node of path to send that move
         while not leastNode.depth == 1:
           leastNode = leastNode.parent
+        
         return leastNode.move
-
-        # leastNode = None
-        # leastScore = 0
-        # oldLeast = 0
-        # count = 0
-        # while True:
-        #   frontierNodes.sort(key=self.sortAttr)
-        #   leastNode = self.bestMove(frontierNodes)
-        #   oldLeast = leastScore
-        #   leastScore = leastNode.steps
-        #   if oldLeast == leastScore or oldLeast < leastScore:
-        #     count += 1
-        #   else:
-        #     count = 0
-        #   #print(leastScore)
-        #   if leastScore == 0 or count == 5:
-        #     break
-        #   frontierNodes.remove(leastNode)
-        #   expandedNodes.append(leastNode)
-        #   # if len(frontierNodes) >= 50:
-        #   #   frontierNodes = frontierNodes[:50]
-        #   frontierNodes.extend(self.expandNode(leastNode))
-        # while not leastNode.depth == 1:
-        #   #print(leastNode)
-        #   leastNode = leastNode.parent
-        # return leastNode.move
 
     ##
     #bestMove
@@ -155,14 +131,17 @@ class AIPlayer(Player):
     #Return: Best node from the evalutaion in each node
     ##
     def bestMove(self, nodes):
-      # bestEval = nodes[0].steps
-      # bestNode = nodes[0]
-      # for node in nodes:
-      #   if node.steps < bestEval:
-      #     bestEval = node.steps
-      #     bestNode = node
       return nodes[0]
 
+    ##
+    # expandNode
+    #
+    # takes in a node and expands it by
+    # taking all valid moves from that state
+    # and creating new nodes for each new move
+    #
+    # returns a list of nodes
+    ##
     def expandNode(self, node):
       moves = listAllLegalMoves(node.state)
       nodes = []
@@ -197,6 +176,11 @@ class AIPlayer(Player):
         #method templaste, not implemented
         pass
 
+    ##
+    # sortAttr
+    #
+    # This a helper function for sorting the frontierNodes
+    ##
     def sortAttr(self, node):
       return node.steps
 
@@ -230,24 +214,33 @@ class AIPlayer(Player):
       myOffense = getAntList(myState, me, (SOLDIER,))
       enemyWorkers = getAntList(myState, enemy, (WORKER,))
 
+      # "steps" val that will be returned
       occupyWin = 0
 
+      # keeps one offensive ant spawned
+      # at all times
       if len(myOffense) < 1:
         occupyWin += 20
       elif len(myOffense) <= 2:
         occupyWin += 30
 
+      # encourage more food gathering
       if myFood < 1:
         occupyWin += 20
 
+      # never want 0 workers
       if len(myWorkers) < 1:
         occupyWin += 100
       if len(myWorkers) > 1:
         occupyWin += 100
 
+      # want to kill enemy queen
       if enemyQueen == None:
         occupyWin -= 1000
 
+      # calculation for soldier going
+      # to kill enemyworker and after
+      # going to sit on enemy anthill
       dist = 100
       for ant in myOffense:
         if len(enemyWorkers) == 0:
@@ -260,6 +253,7 @@ class AIPlayer(Player):
 
       occupyWin += (dist) + (enemyHill.captureHealth)
 
+      # Gather food
       foodWin = occupyWin
       if not len(myOffense) > 0:
         foodNeeded = 11 - myFood
@@ -270,15 +264,13 @@ class AIPlayer(Player):
           for food in foods:
             if stepsToReach(myState, w.coords, food.coords) < distanceToFood:
               distanceToFood = stepsToReach(myState, w.coords, food.coords)
-          if w.carrying:
-            #if min(distanceToHill, distanceToTunnel) > 1:
+          if w.carrying: # if carrying go to hill/tunnel
             foodWin += min(distanceToHill, distanceToTunnel) - 9.5
             if w.coords == myHill.coords or w.coords == myTunnel.coords:
               foodWin += 1.5
             if not len(myOffense) == 0:
               foodWin -= 1
-          else:
-            #if distanceToFood >= 0:
+          else: # if not carrying go to food
             if w.coords == foods[0].coords or w.coords == foods[1].coords:
               foodWin += 1.2
               break
@@ -287,75 +279,19 @@ class AIPlayer(Player):
               foodWin -= 1
         occupyWin += foodWin * (foodNeeded)
 
-      # if myFood > 1:
-      #   occupyWin -= 4
-
-      # food_time = 30
-      # isTunnel = False
-      # for w in myWorkers:
-      #   if w.carrying:
-      #     #We must check every worker and the distance between the anthill and the tunnel.
-      #     #in order to decide which one is quicker to go to.
-      #     distanceToTunnel = stepsToReach(myState, w.coords, myTunnel.coords)
-      #     distanceToHill = stepsToReach(myState, w.coords, myHill.coords)
-      #     isTunnel = True if distanceToTunnel < distanceToHill else False
-      #     min_dist = min(distanceToTunnel, distanceToHill)
-      #     food_time = min_dist
-
-      #   #Otherwise, we want to move toward the food
-      #   else:
-      #     distanceToFood = []
-      #     for f in foods:
-      #       distanceToFood.append(stepsToReach(myState, w.coords, f.coords))
-      #     min_food = 1000
-      #     idx = 0
-      #     for i in range(len(distanceToFood)):
-      #       if distanceToFood[i] < min_food:
-      #         min_food = distanceToFood[i]
-      #         idx = i
-      #     distanceToTunnel = stepsToReach(
-      #         myState, foods[idx].coords, myTunnel.coords)
-      #     distanceToHill = stepsToReach(
-      #         myState, foods[idx].coords, myHill.coords)
-      #     min_dist = min(distanceToTunnel, distanceToHill) + min_food
-      #     food_time = min_dist
-
-      # food_time2 = 0
-      # times = []
-      # if len(myWorkers) > 0:
-      #   for food in foods:
-      #     if myWorkers[0].carrying:
-      #       times.append(stepsToReach(myState, food.coords,
-      #                                 myTunnel.coords if isTunnel else myHill.coords))
-      #     else:
-      #       distanceToTunnel = stepsToReach(
-      #           myState, food.coords, myTunnel.coords)
-      #       distanceToHill = stepsToReach(myState, food.coords, myHill.coords)
-      #       times.append(min(distanceToTunnel, distanceToHill))
-      #   food_time2 = 2 * min(times)
-
-      # foodWin = 0
-      # foodNeeded = 11 - myFood
-      # while foodNeeded > 0:
-      #   if food_time != -1:
-      #     foodWin += food_time
-      #   else:
-      #     foodWin += food_time2
-      #   food_time = -1
-      #   foodNeeded -= 1
+      # encourage queen killing or sitting on tunnel
       if not enemyQueen == None:
         if enemyQueen.coords == enemyHill.coords:
           occupyWin += 20
-      steps = occupyWin
 
-      # if len(myOffense) > 0:
-      #   if myOffense[0].coords == enemyHill.coords:
-      #     steps = 0
-      #steps += 0 if myFood > 2 else 10
-      #steps += 0 if len(myWorkers) == 1 else 10
-      return steps
+      return occupyWin
 
-
+##
+# Node Class
+#
+# Defines how our Node is set up to use for searching
+#
+##
 class Node:
   def __init__(self, move, state, depth, steps, parent):
     self.move = move
